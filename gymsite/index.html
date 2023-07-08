@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <title>OckFitness</title>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo"><a href="index.html">OckFitness</a></div>
+      <ul class="links">
+        <li><a href="locations.html" class="button">Locations</a></li>
+        <li><a href="personaltraining.html" class="button">Personal Training</a></li>
+        <li><a href="memberlogin.html" class="button">Member Login</a></li>
+        <li><a href="contact.html" class="button">Contact Us</a></li>
+      </ul>
+      <a href="#" class="action_btn">Join Now</a>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <div class="dropdown_menu">
+      <li><a href="locations.html" class="button">Locations</a></li>
+      <li><a href="personaltraining.html" class="button">Personal Training</a></li>
+      <li><a href="memberlogin.html" class="button">Member Login</a></li>
+      <li><a href="contact.html" class="button">Contact Us</a></li>
+      <li><a href="#" class="action_btn">Join Now</a></li>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero">
+      <h1>Start your fitness journey now! <br /> Find a gym near you.</h1>
+      <div class="search_box">
+        <input class="search_txt" type="text" name="" placeholder="Search by City, Zip or State">
+        <a href="#" class="search_btn">
+          <i class="fas fa-search"></i>
+        </a>
+      </div>
+    </section>
+
+    <section id="additional">
+      <h1>Additional info</h1>
+    </section>
+
+  </main>
+
+
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+
+    toggleBtn.onclick = function (){
+      dropDownMenu.classList.toggle('open')
+      const isOpen = dropDownMenu.classList.contains('open')
+
+      toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+    }
+  </script>
+</body>
+</html>
